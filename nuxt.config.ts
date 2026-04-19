@@ -3,7 +3,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   nitro: {
-    preset: 'vercel'
+    preset: 'vercel',
+    vercel: {
+        config: {
+            runtime: 'nodejs20.x'
+        }
+    }
   },
   routeRules: {
     '/': { prerender: true }
