@@ -1,17 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  ssr: true,
+  // Prerender all routes at build time → zero Serverless Functions on Vercel
   nitro: {
-    preset: 'vercel',
-    vercel: {
-        config: {
-            runtime: 'nodejs20.x'
-        }
-    }
+    preset: 'nitro-prerender'
   },
-  routeRules: {
-    '/': { prerender: true }
+  experimental: {
+    payloadExtraction: false
   },
 
   app: {
@@ -19,7 +13,7 @@ export default defineNuxtConfig({
       title: 'Byron Biroli — Founder, Sendu',
       meta: [
         { name: 'description', content: "Byron Biroli, Founder and Managing Director of Sendu, building embedded banking infrastructure for Uganda's mobile money ecosystem. Twenty years delivering technology infrastructure across UK telecoms, international creative technology, and public cultural programmes." },
-        
+
         // Open Graph
         { property: 'og:type', content: 'profile' },
         { property: 'og:title', content: 'Byron Biroli — Founder, Sendu' },
