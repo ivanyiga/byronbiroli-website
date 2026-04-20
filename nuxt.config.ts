@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Byron Biroli — Founder, Sendu' },
         { property: 'og:description', content: "Founder and Managing Director of Sendu. Embedded banking infrastructure for Uganda's mobile money ecosystem." },
         { property: 'og:url', content: 'https://byronbiroli.com/' },
-        { property: 'og:image', content: 'https://byronbiroli.com/og.png' },
+        { property: 'og:image', content: '/og.png' },
         { property: 'profile:first_name', content: 'Byron' },
         { property: 'profile:last_name', content: 'Biroli' },
 
@@ -27,12 +27,11 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Byron Biroli — Founder, Sendu' },
         { name: 'twitter:description', content: "Founder and Managing Director of Sendu. Embedded banking infrastructure for Uganda's mobile money ecosystem." },
-        { name: 'twitter:image', content: 'https://byronbiroli.com/og.png' }
+        { name: 'twitter:image', content: '/og.png' }
       ],
       link: [
         { rel: 'canonical', href: 'https://byronbiroli.com/' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap' }
@@ -56,8 +55,8 @@ export default defineNuxtConfig({
               "name": "Goldsmiths, University of London"
             },
             "nationality": [
-              {"@type": "Country", "name": "United Kingdom"},
-              {"@type": "Country", "name": "Uganda"}
+              { "@type": "Country", "name": "United Kingdom" },
+              { "@type": "Country", "name": "Uganda" }
             ],
             "sameAs": [
               "https://www.linkedin.com/in/byron-biroli",
